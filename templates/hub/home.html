@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Oriva | Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>Oriva</h1>
+  <p class="sub">
+    Building smart engineering products — one project at a time.
+  </p>
+
+  <div class="hero-actions">
+    <a class="btn" href="/projects/">View Projects</a>
+    <a class="btn btn-ghost" href="https://github.com/" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>NetSense Campus</h3>
+    <p>Indoor Wi-Fi & Mobile signal heatmaps + dead-zone analytics.</p>
+    <span class="tag">Coming Soon</span>
+  </div>
+
+  <div class="card">
+    <h3>SpenFlow</h3>
+    <p>A language + compiler designed to help GenAI workflows.</p>
+    <span class="tag">Planning</span>
+  </div>
+</section>
+{% endblock %}
