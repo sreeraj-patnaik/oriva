@@ -3,29 +3,138 @@
 {% block title %}Oriva | Home{% endblock %}
 
 {% block content %}
+
+<!-- HERO -->
 <section class="hero">
-  <h1>Oriva</h1>
-  <p class="sub">
-    Building smart engineering products — one project at a time.
-  </p>
+  <div class="hero-left">
+    <p class="eyebrow">ORIVA • PRODUCT UMBRELLA</p>
 
-  <div class="hero-actions">
-    <a class="btn" href="/projects/">View Projects</a>
-    <a class="btn btn-ghost" href="https://github.com/" target="_blank">GitHub</a>
+    <h1 class="hero-title">
+      Building <span class="grad">engineering products</span><br />
+      with real-world impact.
+    </h1>
+
+    <p class="sub hero-sub">
+      Oriva is the parent identity for my builds — web platforms, AI systems,
+      and tools designed with clean architecture and professional UI/UX.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/projects/">Explore Projects</a>
+      <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noreferrer">
+        View GitHub
+      </a>
+    </div>
+
+    <div class="mini-stats">
+      <div class="mini-stat">
+        <div class="mini-stat-num">2+</div>
+        <div class="mini-stat-label">Products</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-num">Django</div>
+        <div class="mini-stat-label">Backend</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-num">ML</div>
+        <div class="mini-stat-label">Future scope</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-card">
+      <p class="hero-card-title">Oriva Hub</p>
+      <p class="hero-card-sub">
+        The base platform powering every Oriva product.
+      </p>
+
+      <div class="hero-card-grid">
+        <div class="chip">Clean UI</div>
+        <div class="chip">Modular Apps</div>
+        <div class="chip">Deploy Ready</div>
+        <div class="chip">Scalable</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="cards">
-  <div class="card">
-    <h3>NetSense Campus</h3>
-    <p>Indoor Wi-Fi & Mobile signal heatmaps + dead-zone analytics.</p>
-    <span class="tag">Coming Soon</span>
+<!-- PRODUCTS -->
+<section class="section">
+  <div class="section-head">
+    <h2>Products under Oriva</h2>
+    <p class="muted">A growing lineup of engineering-focused products.</p>
   </div>
 
-  <div class="card">
-    <h3>SpenFlow</h3>
-    <p>A language + compiler designed to help GenAI workflows.</p>
-    <span class="tag">Planning</span>
+  <div class="cards">
+    <article class="card card-glow">
+      <div class="card-top">
+        <h3>NetSense Campus</h3>
+        <span class="badge badge-wip">Coming Soon</span>
+      </div>
+      <p>
+        Indoor Wi-Fi & Mobile signal heatmaps with floor-map tagging,
+        dead-zone analytics, and ML-based signal prediction.
+      </p>
+
+      <div class="card-actions">
+        <a class="link" href="/projects/">View details →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <h3>SpenFlow</h3>
+        <span class="badge badge-plan">Planning</span>
+      </div>
+      <p>
+        A language + compiler ecosystem designed to align coding workflows with GenAI productivity.
+      </p>
+
+      <div class="card-actions">
+        <a class="link" href="/projects/">View details →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <h3>Oriva Labs</h3>
+        <span class="badge badge-live">Live</span>
+      </div>
+      <p>
+        A space for experiments, prototypes, internal tooling, and research builds.
+      </p>
+
+      <div class="card-actions">
+        <a class="link" href="/projects/">View details →</a>
+      </div>
+    </article>
   </div>
 </section>
+
+<!-- WHY ORIVA -->
+<section class="section">
+  <div class="section-head">
+    <h2>Why Oriva?</h2>
+    <p class="muted">
+      A consistent system for building serious projects — not random scattered apps.
+    </p>
+  </div>
+
+  <div class="feature-grid">
+    <div class="feature">
+      <h3>Brand consistency</h3>
+      <p>Every product carries the same identity and quality standard.</p>
+    </div>
+    <div class="feature">
+      <h3>Engineering-first</h3>
+      <p>Clean architecture, scalable structure, and real deployment practice.</p>
+    </div>
+    <div class="feature">
+      <h3>Execution mindset</h3>
+      <p>Build → ship → iterate — like real industry products.</p>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

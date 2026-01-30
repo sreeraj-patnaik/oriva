@@ -3,20 +3,120 @@
 {% block title %}Oriva | Projects{% endblock %}
 
 {% block content %}
-<h1>Projects</h1>
-<p class="sub">Everything built under the Oriva umbrella.</p>
 
-<div class="cards">
-  <div class="card">
-    <h3>NetSense Campus</h3>
-    <p>Wi-Fi & mobile signal heatmap system (floor-wise).</p>
-    <a class="link" href="#">Open →</a>
+<section class="page-head">
+  <div>
+    <p class="eyebrow">ORIVA • PROJECTS</p>
+    <h1>Products under Oriva</h1>
+    <p class="sub">
+      A curated lineup of engineering builds — designed like real products, not random apps.
+    </p>
   </div>
 
-  <div class="card">
-    <h3>SpenFlow</h3>
-    <p>Language + compiler for GenAI-aligned development.</p>
-    <a class="link" href="#">Open →</a>
+  <div class="page-head-actions">
+    <a class="btn btn-ghost" href="/">Home</a>
+    <a class="btn btn-primary" href="/about/">About Oriva</a>
   </div>
-</div>
+</section>
+
+<!-- FILTER CHIPS (UI-ONLY for now) -->
+<section class="filters">
+  <span class="pill pill-active">All</span>
+  <span class="pill">Web</span>
+  <span class="pill">AI / ML</span>
+  <span class="pill">Systems</span>
+  <span class="pill">Tools</span>
+</section>
+
+<!-- PROJECT CARDS -->
+<section class="cards">
+
+  <article class="card card-glow">
+    <div class="card-top">
+      <h3>NetSense Campus</h3>
+      <span class="badge badge-wip">Coming Soon</span>
+    </div>
+
+    <p>
+      Floor-wise Wi-Fi & Mobile signal heatmap with map pin-tagging, dead-zone analytics,
+      and ML-based prediction for signal strength.
+    </p>
+
+    <div class="tag-row">
+      <span class="tag">Django</span>
+      <span class="tag">ML</span>
+      <span class="tag">Maps</span>
+      <span class="tag">Android</span>
+    </div>
+
+    <div class="card-actions">
+      <a class="btn btn-small btn-primary" href="#">Details</a>
+      <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <h3>SpenFlow</h3>
+      <span class="badge badge-plan">Planning</span>
+    </div>
+
+    <p>
+      A language + compiler ecosystem designed to support GenAI workflows,
+      automation patterns, and developer productivity.
+    </p>
+
+    <div class="tag-row">
+      <span class="tag">Compiler</span>
+      <span class="tag">IR</span>
+      <span class="tag">GenAI</span>
+      <span class="tag">Systems</span>
+    </div>
+
+    <div class="card-actions">
+      <a class="btn btn-small btn-primary" href="#">Concept</a>
+      <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">Docs</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <h3>Oriva Hub</h3>
+      <span class="badge badge-live">Live</span>
+    </div>
+
+    <p>
+      The base platform hosting every Oriva product — with consistent identity,
+      navigation, deployment, and scalability.
+    </p>
+
+    <div class="tag-row">
+      <span class="tag">Django</span>
+      <span class="tag">UI/UX</span>
+      <span class="tag">Deploy</span>
+    </div>
+
+    <div class="card-actions">
+      <a class="btn btn-small btn-primary" href="/">Open</a>
+      <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">Repo</a>
+    </div>
+  </article>
+
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="cta-card">
+    <h2>Want a new product under Oriva?</h2>
+    <p class="muted">
+      Every new build gets a structured home, clean branding, and scalable architecture.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/about/">Read About</a>
+      <a class="btn btn-ghost" href="/">Back Home</a>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

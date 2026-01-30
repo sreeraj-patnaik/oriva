@@ -4,29 +4,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>{% block title %}Oriva{% endblock %}</title>
+
+  <!-- Basic SEO -->
+  <meta name="description" content="{% block meta_description %}Oriva is a product umbrella for engineering builds—AI, web, systems, and research-backed projects.{% endblock %}" />
+  <meta name="theme-color" content="#0b1020" />
+
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" href="{% static 'img/favicon.png' %}" /> -->
+
+  <!-- CSS -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="/">Oriva</a>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/projects/">Projects</a>
-        <a href="/about/">About</a>
-      </div>
-    </div>
-  </nav>
+  <!-- Skip link (accessibility) -->
+  <a class="skip-link" href="#content">Skip to content</a>
 
-  <main class="container">
+  <!-- Background FX -->
+  <div class="bg-fx" aria-hidden="true"></div>
+
+  <!-- Top Navigation -->
+  <header class="topbar">
+    <nav class="nav">
+      <div class="nav-inner">
+
+        <!-- Brand / Logo -->
+        <a class="brand" href="/" aria-label="Oriva Home">
+          <!-- If you have the Oriva logo, put it here -->
+          <img
+            class="brand-logo"
+            src="{% static 'img/oriva-logo.jpg' %}"
+            alt="Oriva"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"
+          />
+          <span class="brand-text" style="display:none;">Oriva</span>
+        </a>
+
+        <!-- Links -->
+        <div class="nav-links">
+          <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+          <a class="nav-link {% if '/projects' in request.path %}active{% endif %}" href="/projects/">Projects</a>
+          <a class="nav-link {% if '/about' in request.path %}active{% endif %}" href="/about/">About</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="nav-cta">
+          <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a class="btn btn-primary" href="/projects/">
+            Explore
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main id="content" class="container">
     {% block content %}{% endblock %}
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>© {{ year }} Oriva. Built by Wizardzpen.</p>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Oriva</div>
+        <div class="footer-sub">Engineering products • AI • Systems • Web</div>
+      </div>
+
+      <div class="footer-right">
+        <a class="footer-link" href="/projects/">Projects</a>
+        <a class="footer-link" href="/about/">About</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© {{ year }} Oriva. Built by Wizardzpen.</p>
+      </div>
     </div>
   </footer>
 
